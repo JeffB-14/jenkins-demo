@@ -20,3 +20,17 @@ pipelineJob('theme-park-job') {
         }
     }
 }
+pipelineJob('theme-park-job-maven') {
+    definition {
+        cpsScm {
+            scm {
+                git {
+                    remote {
+                        url 'https://github.com/JeffB-14/theme_park_rides-maven.git'
+                    }
+                    branch 'master'
+                }
+            }
+        }
+    }
+}
